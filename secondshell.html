@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Flexbox with Icon and Text</title>
+</head>
+<style>
+
+body {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  margin:0;
+  padding:0;
+}
+
+.flex-container {
+    display: flex;
+    margin-bottom:5px;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.text {
+    font-size: 16px;
+    color: #333;
+    margin-left: 12px;
+}
+
+.imagebackground{
+    padding:5px;
+    background:#c3c4c8;
+}
+
+/* New stuff */
+
+.seambox{
+    display:flex;
+    justify-content:space-between;
+    width:80%;
+    margin:auto;
+}
+
+.seamimage{
+    flex-basis:50%;
+    /* width:100%; */
+}
+
+.seamtext{
+    width:100%;
+    flex-basis:44%;
+}
+
+.seamtext h1{
+    margin-bottom:-10px;
+    font-weight:600;
+    font-size:32px;
+    color:#212121;
+}
+
+.seamtext p{
+    line-height:1.8rem;
+    font-weight:100;
+    font-size:17px;
+    font-family: "Radio Canada Big", sans-serif;
+    color:#212121;
+}
+
+/* Next */
+
+.sebox{
+    display:flex;
+    justify-content:space-between;
+    width:85%;
+    margin:auto;
+}
+
+.se{
+    background:#fefbea;
+    padding:20px 50px;
+    border-radius:20px;
+    flex-basis:40%;
+    border: black 1px solid;
+}
+
+
+.se h2{
+    line-height:1px;
+    padding-bottom:7px;
+}
+
+.se p{
+    font-weight:300;
+    font-size:17px;
+    padding-top:10px;
+    padding-bottom:7px;
+    line-height:1.5rem;
+}
+
+.se .in{
+    font-weight:700;
+}
+
+.se .colorinner{
+    color:#eed55f;
+}
+
+.se button{
+    background:black;
+    border:none;
+    padding:7px 20px 7px 20px;
+    border-radius:5px;
+    font-weight:300;
+    font-size:15px;
+    color:white;
+}
+
+/* Next */
+
+.yammerbox{
+    background:black;
+    width:75%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin:auto;
+    color:white;
+    border-radius:20px;
+    padding:20px 70px 5px 70px;
+}
+
+.yammerbtn button{
+    background:white;
+    color:black;
+    border:none;
+    font-weight:600;
+    font-size:16px;
+    padding:15px 35px;
+    border-radius:12px
+}
+
+.yammer h1{
+    letter-spacing: 2px;;
+    line-height:1px;
+    font-size:38px;
+    color:#f1efef;
+    font-weight:600;
+    padding-bottom:10px;
+}
+
+.yammer h2{
+    line-height:1px;
+    font-weight:100;
+    font-family:poppins;
+    font-size:30px;
+    padding-top:5px;
+}
+
+.yammer p{
+    font-weight:200;
+    font-family:poppins;
+    font-size:16px;
+    color:#9e9d9d;
+    margin-top:-5px;
+}
+
+.yammerinner{
+    color:#eed55f
+}
+
+.yammer h3{
+    line-height:1px;
+}
+
+
+/* Next */
+
+.footerbg{
+    background:#191919;
+    color:white;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.footer{
+    width:85%;
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+}
+
+.onefoot{
+    flex-basis:20%;
+}
+
+.onefoot h3{
+    color:#ecd04b;
+    font-size:22px;
+    font-weight:400;
+}
+
+.onefoot p{
+    color:rgb(212, 211, 211);
+    font-size:18px;
+    font-weight:300;
+    padding-bottom:5px;
+}
+
+.onefoot p a{
+    color:rgb(212, 211, 211);
+    font-size:18px;
+    font-weight:300;
+}
+
+
+</style>
+<body>
+
+    <div class="seambox">
+
+        <div class="seamimage">
+            <img src="images/seam.jpg" width="100%"/>
+        </div>
+
+        <div class="seamtext">
+            <h1> Welcome to the SEAM Portal </h1>
+            <p> The Safety, Environment & Asset Management (SEAM)
+                Standards are intended to empower our businesses
+                and assets to effectively address risk and
+                the performance cycle of our assets through
+                the identification and application of the
+                relevant requirements.</p>
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="sebox">
+
+        <div class="se">
+            <h2> SE in <span class="colorinner"> Picture </span> </h2>
+            <p> <span class="in"> Safety and Environment : </span> Here, we find a catalougue of activities ranging from MEFs, Away days
+            , Swallow Parties, Xmas moments and Favourite Photo Gallery </p>
+            <button> <a> Click & enjoy memories since 2020 </a></button>
+        </div>
+
+        <div class="se">
+            <h2> SE specific YAMMER <span class="colorinner"> POST </span> </h2>
+            <p> <span class="in"> Harm : </span> A crew member sustained burns as a result of an engine room fire incident fire incident
+            marine vessel enroute to ogunu from Forcados </p>
+            <button> <a> Click to open and populate </a></button>
+            <br>
+            <br>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="yammerbox">
+
+        <div class="yammer">
+            <h1> YAMMER </h1>
+            <h2> SCiN <span class="yammerinner"> Safety </span> & Environment Community </h2>
+            <p> Goal Zero. No Harm. No Risk </p>
+        </div>
+
+        <div class="yammerbtn">
+            <button> <a> Click here to open </a> </button>
+        </div>
+
+    </div>
+
+    <!-- Next -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="footerbg">
+
+        <div class="footer">
+
+        <div class="onefoot">
+
+            <img src="images/spwhitelogo.png">
+
+            <p> <a> www.hssesharepoint.com </a> </p>
+            <p> c 2023 HSSE Sharepoint Solution</p>
+
+        </div>
+
+        <div class="onefoot">
+
+            <h3> Essential Links </h3>
+
+            <p> <a> www.hssesharepoint.com </a> </p>
+            <p> c 2023 HSSE Sharepoint Solution</p>
+
+        </div>
+
+        <div class="onefoot">
+
+            <h3> Essential Links </h3>
+
+            <p> <a> www.hssesharepoint.com </a> </p>
+            <p> c 2023 HSSE Sharepoint Solution</p>
+
+        </div>
+
+        <div class="onefoot">
+
+            <h3> Essential Links </h3>
+
+            <p> <a> www.hssesharepoint.com </a> </p>
+            <p> c 2023 HSSE Sharepoint Solution</p>
+
+        </div>
+
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

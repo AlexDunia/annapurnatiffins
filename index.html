@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <title>Annapurna Tiffins</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .container {
+      position: relative;
+      background-image: url('images/dosa.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+    }
+
+    .content {
+      color: white;
+      padding: 20px;
+      width: 80%;
+      margin: auto;
+      z-index: 2;
+    }
+
+    .mainreviews {
+      padding-top: 100px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      background: #F6F6F4;
+    }
+
+    .mainreviewsinner {
+      display: flex;
+      width: 80%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    .box {
+      margin-top: 20px;
+      width: 48.7%;
+      background-color: #e0e0e0;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .box p {
+      margin-top: 0;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 600;
+      line-height: 25px;
+      padding: 39px 40px;
+      font-size: 18px;
+    }
+
+    .firstcolor {
+      background: #8B290E;
+      color: white;
+    }
+
+    .secondcolor {
+      background: #DB9437;
+      color: white;
+    }
+
+    .finduscontainer {
+      position: relative;
+      background-image: url('images/dosa.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .finduscontent h1 {
+      color: white;
+      padding: 20px;
+      margin: auto;
+      font-size:40px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .socials-container {
+      display: flex;
+      width: 50%;
+      margin: auto;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .socials {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .socials img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .squarecontainer {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .squareinnercontainer {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .square {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      border-radius: 40px;
+      margin: auto;
+    }
+
+    .newsquare {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .square1 {
+      background-color: #8B290E;
+      border: 3px solid white;
+      top: 20px;
+      right:315px;
+      position: absolute;
+      z-index: 1;
+      padding-top:27px;
+      padding-right:25px;
+      padding-left:25px;
+      padding-bottom:27px;
+      width: 47%;
+    }
+
+    .square2 {
+      background-color: #DB9437;
+      border: 3px solid white;
+      z-index: 2;
+      width: 47%;
+      position: absolute;
+      top: 5px;
+      font-weight:700;
+      padding-top:27px;
+      padding-right:25px;
+      padding-left:25px;
+      padding-bottom:27px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .arrow {
+      position: absolute;
+      top: -100px;
+      left: 43%;
+      z-index:400;
+      transform: translateX(-50%);
+    }
+
+    .menucheck {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+    }
+
+    .menucheck h1, .menucheck h2 {
+      margin: 0;
+    }
+
+    .confirmmenucheck{
+      color:white;
+      line-height:1rem;
+      flex-basis:40%;
+      line-height:2rem;
+      text-align:left;
+    }
+
+    .confirmmenucheckbutton{
+      color:white;
+      line-height:1.4rem;
+      padding: 14px 10px;
+      background:#8B290E;
+      border:white 3px solid;
+      border-radius:35px;
+      font-size:16px;
+      font-weight:500;
+      text-align:center;
+      flex-basis:40%;
+    }
+
+    footer{
+      margin-top:300px;
+      background:#211B18;
+      color:white;
+      padding-top:60px;
+    }
+
+    .mainfooter{
+      width:80%;
+      margin:auto;
+      padding-bottom:50px;
+      text-align:center;
+    }
+
+    footer p{
+      color:rgb(160, 159, 159);
+      padding-top:30px;
+    }
+
+    /* styles.css */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.loader {
+    border: 16px solid #c0bebe; /* Light grey */
+    border-top: 16px solid #254052; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <h1>Here's what people have<br>to say about us:</h1>
+    </div>
+  </div>
+
+  <div class="mainreviews">
+    <div class="mainreviewsinner">
+      <div class="box firstcolor">
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+      </div>
+      <div class="box secondcolor">
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+      </div>
+      <div class="box secondcolor">
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+      </div>
+      <div class="box firstcolor">
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="loader-container">
+    <div class="loader"></div>
+</div> -->
+
+  <div class="finduscontainer">
+    <div class="finduscontent">
+      <h1>Find us on Social Media</h1>
+      <div class="socials-container">
+        <div class="socials">
+          <img src="./images/facebook.png" alt="Facebook">
+        </div>
+        <div class="socials">
+          <img src="./images/xlogo.png" alt="XLogo">
+        </div>
+        <div class="socials">
+          <img src="./images/xlogo.png" alt="XLogo">
+        </div>
+      </div>
+    </div>
+
+    <div class="squarecontainer">
+      <div class="squareinnercontainer">
+        <div class="arrow">
+          <img src="images/arrowdown.png" width="220px">
+        </div>
+
+        <div class="newsquare">
+          <div class="square square1"></div>
+          <div class="square square2">
+            <div class="menucheck">
+              <div class="confirmmenucheck">
+                <h1>Have you seen our menu?</h1>
+              </div>
+              <div class="confirmmenucheckbutton">
+                <h2>Not yet<br>but I want to</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="mainfooter">
+      <hr>
+      <p>  Copyright 2024 </p>
+    </div>
+  </footer>
+
+</body>
+</html>
