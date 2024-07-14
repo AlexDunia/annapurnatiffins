@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            background: url('images/patternsbackground.jpg') no-repeat center center/cover;
+           position: relative;
+         height: 75vh;
+         color: white;
+         text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 90px;
+            margin: auto;
+            width: 85%;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight:200;
+            font-size: 17px;
+            margin-right: 100px;
+        }
+
+      .herotext{
+        padding-top:100px;
+        width: 33%;
+        font-size: 20px;
+        color:white;
+        margin:auto;
+        text-align:center;
+        align-items:center;
+      }
+
+
+footer{
+      margin-top:300px;
+      background:#211B18;
+      color:white;
+      padding-top:60px;
+    }
+
+    .mainfooter{
+      width:80%;
+      margin:auto;
+      padding-bottom:50px;
+      text-align:center;
+    }
+
+    footer p{
+      color:rgb(160, 159, 159);
+      padding-top:30px;
+    }
+
+    .navflexmobile {
+       display:none;
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contentresponsive{
+  display:none;
+}
+
+.menuimagediv{
+    margin-top:50px;
+    width:80%;
+    margin:auto;
+}
+
+
+.menuimage img{
+    width:100%;
+    margin-bottom:50px;
+}
+/* Media query */
+
+.responsivecontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mobilecontainerdiv{
+          z-index:100;
+
+        }
+
+        .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         display:none;
+         width:90%;
+         }
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    opacity: 0; /* Initial state */
+    transform: translateY(100px); /* Initial state */
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.open .overlay-content a {
+    animation: slideUp 0.5s forwards; /* Animation */
+}
+
+
+.desktopscrolled {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+    /* do for 770, 600, 400, 200 */
+    @media (max-width: 770px) {
+
+    .menuimagediv{
+    margin-top:100px;
+    width:95%;
+    margin:auto;
+}
+
+
+.menuimage img{
+    width:100%;
+    margin-bottom:50px;
+}
+    .navbar{
+      display:none;
+    }
+
+    .herotext {
+    padding-top: 90px;
+    width: 90%;
+    font-size: 20px;
+    color: white;
+    margin: auto;
+    text-align:center;
+}
+
+.starflex {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.iconcircle {
+   display:none;
+}
+
+.textdesign {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    font-size: 28px;
+    top: -40px;
+    left: 0px;
+    color: transparent;
+    -webkit-text-stroke: 1px #DB9437;
+    white-space: nowrap;
+    opacity: 0.4;
+}
+
+.textdesigntwo {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    font-size: 28px;
+    top: 20px;
+    left: 0px;
+    color: transparent;
+    -webkit-text-stroke: 1px #DB9437;
+    white-space: nowrap;
+    opacity: 0.6;
+}
+
+.slanttext {
+    opacity: 0.3;
+}
+
+.aboutushead {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.aboutflex {
+    z-index:10;
+    display: block;
+    width: 85%;
+    margin: auto;
+}
+
+.abouttext h3{
+    display:none;
+}
+
+.abouttext{
+  text-align: justify;
+}
+
+.textimg {
+    top: -120px;
+    position: absolute;
+}
+
+.textimg img{
+    width:90px;
+}
+
+.aboutimage{
+  margin-top:50px;
+}
+
+.aboutimage img {
+    width:100%;
+}
+
+.aboutflex{
+  width:80%;
+}
+
+.container {
+    height: 150px;
+}
+
+.content {
+    font-size: 11px;
+}
+
+.content h1{
+  font-weight:200;
+  font-style: italic;
+}
+
+.box p {
+        font-weight: 500;
+        line-height: 25px;
+        padding: 20px 20px;
+        font-size: 18px;
+    }
+
+    .mainreviewsinner {
+    display: block;
+}
+
+    .firstcolor {
+        width: 100%;
+        background: #8B290E;
+        color: white;
+        margin-bottom: 30px;
+        border: 1px solid black;
+    }
+
+    .secondcolor {
+        width: 100%;
+        background: #DB9437;
+        color: white;
+        margin-bottom: 30px;
+        border: 2px solid black;
+    }
+
+    .newsquare {
+    display:none;
+}
+
+.arrow {
+   display:none;
+}
+
+.squareinnercontainer {
+    display:none;
+}
+
+.squarecontainer {
+    display:none;
+}
+
+.reviewbg {
+    padding-top: 50px;
+}
+
+.finduscontainer {
+    height: 170px;
+    padding-top:0;
+    display: flex;
+}
+
+.reviewimgtwo {
+    position: absolute;
+    z-index: 100;
+    left: -30px;
+    bottom: -190px;
+}
+
+.reviewimgthree {
+        position: absolute;
+        z-index: 100;
+        right:0;
+        bottom: -390px;
+    }
+
+.finduscontent h1 {
+    font-size: 25px;
+    font-weight:300;
+}
+
+.reviewbg {
+    height:auto;
+    padding-bottom:30px;
+}
+
+.reviewbg .overlay {
+        display: none !important;
+    }
+
+.socials-container {
+    width:75%;
+}
+
+.reviewimgthree {
+    display:none;
+}
+
+.reviewimg {
+  right: -100px;
+}
+
+footer {
+    margin-top: 70px;
+    background: #211B18;
+    color: white;
+    padding-top: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+  /* Media query */
+
+
+
+        /* .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         width:90%;
+         padding-bottom: 30px;
+        padding-top: 30px;
+         } */
+  /* Media query */
+
+  .scrolled {
+    width:100%;
+    z-index:100;
+    box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
+}
+
+  .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         width:90%;
+         padding-bottom: 30px;
+        padding-top: 30px;
+         }
+
+.responsivecontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color:white;
+}
+
+.mobilecontainerdiv{
+          z-index:100;
+        }
+
+        .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         width:90%;
+         }
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    margin-bottom:30px;
+    display: block;
+    transition: 0.3s;
+    opacity: 0; /* Initial state */
+    transform: translateY(100px); /* Initial state */
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.open .overlay-content a {
+    animation: slideUp 0.5s forwards; /* Animation */
+}
+
+/* End Nav */
+  .content{
+  display:none;
+}
+
+/* End Nav */
+    }
+
+
+    @media (max-width: 400px) {
+    .aboutimage img {
+    width:100%;
+  }
+
+  .herotext {
+
+        width: 85%;
+        font-size: 14px;
+        color: white;
+        margin: auto;
+        text-align: center;
+    }
+    }
+
+@media (max-width: 1025px) and (min-width: 600px) {
+
+  .aboutimage img {
+    width:100%;
+  }
+
+  .herotext {
+    padding-top: 100px;
+    width: 80%;
+    font-size: 35px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.aboutflex {
+    display: block;
+}
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+
+
+        <div class="scrolled">
+            <div class="navflexmobile">
+
+              <div class="navlogo">
+                <img src="./images/annapurnalogo2.png" width="150px">
+              </div>
+
+            <div class="mobilecontainerdiv">
+              <div class="mobilecontainer">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <div class="overlay" id="overlay">
+                    <div class="overlay-content">
+                        <span class="closebtn" id="closebtn" style="color: white">&times;</span>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <a href="#">Home</a>
+                        <a href="#" class="about">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Menu</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            </div>
+            </div>
+
+
+        <nav class="navbar">
+            <div class="navlogo">
+                <img src="./images/annapurnalogo2.png" width="150px">
+              </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="herotext">
+            <h1> Our Menu </h1>
+        </div>
+
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+  <div class="menuimagediv">
+
+    <div class="menuimage">
+        <img src="./images/a1.jpg">
+    </div>
+
+    <div class="menuimage">
+        <img src="./images/a2.jpg">
+    </div>
+
+    <div class="menuimage">
+        <img src="./images/a3.jpg">
+    </div>
+
+    <div class="menuimage">
+        <img src="./images/a4.jpg">
+    </div>
+
+    <div class="menuimage">
+        <img src="./images/a4.jpg">
+    </div>
+
+    </div>
+
+
+
+
+      <footer>
+        <div class="mainfooter">
+          <hr>
+          <p>  Copyright 2024 </p>
+        </div>
+      </footer>
+</body>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+    const scrolled = document.querySelector('.scrolled');
+    const closebtn = document.getElementById('closebtn');
+    const navbardesktop = document.querySelector('.navbar');
+    const links = document.querySelectorAll('.nav-links a');
+    const navbar = document.querySelector('.navflexmobile');
+
+    // Scroll event listener
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            scrolled.style.background = 'white';
+            scrolled.style.position = 'fixed';
+            navbardesktop.classList.add('desktopscrolled');
+            navbardesktop.style.paddingTop = '20px';
+            navbardesktop.style.paddingBottom = '20px';
+
+            // Set color for each link
+            links.forEach(link => {
+                link.style.color = 'black';
+            });
+
+            scrolled.style.top = '0';
+            hamburger.style.color = 'black';
+        } else {
+            console.log('User scrolling up.'); // Debug message
+            scrolled.style.position = '';
+            navbardesktop.classList.remove('desktopscrolled');
+            scrolled.style.background = 'none';
+
+            // Reset color for each link
+            links.forEach(link => {
+                link.style.color = '';
+            });
+
+            hamburger.style.color = 'white';
+        }
+    });
+
+    // Hamburger menu click event listener
+    hamburger.addEventListener('click', () => {
+        overlay.classList.add('open'); // Add 'open' class to show overlay
+        links.forEach((link, index) => {
+            link.style.animationDelay = `${index * 0.1}s`; // Add animation delay for each link
+            link.classList.add('slide-up'); // Add 'slide-up' class for animation
+        });
+    });
+
+    // Close button click event listener
+    closebtn.addEventListener('click', () => {
+        overlay.classList.remove('open'); // Remove 'open' class to hide overlay
+        links.forEach(link => {
+            link.classList.remove('slide-up'); // Remove 'slide-up' class to reset animation
+        });
+    });
+});
+
+</script>
+
+</html>

@@ -1,60 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Layout</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            font-family: Arial, sans-serif;
-        }
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+              rel="stylesheet"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+              rel="stylesheet"
+            />
 
-        .background {
-            background-image: url('images/bgfood.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            width: 100%;
-            position: relative;
-        }
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+              rel="stylesheet"
+            />
+            <title> Annapurna Tiffins - About Us </title>
+            <style>
+              body {
+                margin: 0;
+                padding: 0;
+                font-family: "Merienda", cursive;
+                font-optical-sizing: auto;
+                overflow-x: hidden;
+              }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 90px;
-            margin: auto;
-            width: 85%;
-        }
+              p {
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-style: normal;
+              }
 
-        .logo {
-            color: white;
-            font-size: 24px;
-        }
+              .nav-links a:hover {
+                color: #db9437;
+                transform: scale(1.8);
+              }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
 
-        .nav-links li {
-            margin: 0 10px;
-        }
+              .navbarwidth {
+                display: flex;
+                width: 85%;
+                margin: auto;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 70px;
+                padding-bottom: 70px;
+              }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight:200;
-            font-size: 17px;
-            margin-right: 100px;
-        }
+              .innerbgwidth {
+                width: 80%;
+                margin: auto;
+              }
+
+              .logo {
+                color: white;
+                font-size: 24px;
+              }
+
+              .nav-links {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                flex-grow: 1;
+                justify-content: flex-end;
+              }
+
+              .nav-links li {
+                margin: 0 20px;
+                opacity: 0;
+                transform: translateY(-20px);
+                animation: slideIn 0.8s forwards;
+              }
+
+              .nav-links li:nth-child(1) {
+                animation-delay: 0.2s;
+              }
+
+              .nav-links li:nth-child(2) {
+                animation-delay: 0.4s;
+              }
+
+              .nav-links li:nth-child(3) {
+                animation-delay: 0.6s;
+              }
+
+              .nav-links li:nth-child(4) {
+                animation-delay: 0.8s;
+              }
+
+              .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.7s, transform 0.3s;
+              }
+
+              .nav-links a:hover {
+                color: #ffd700;
+                transform: scale(1.1);
+              }
+
+              @keyframes slideIn {
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+
+              .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: 200;
+                font-size: 17px;
+                /* margin-right: 100px; */
+              }
+
+              .desktopscrolled {
+                background: #221d1b;
+                width: 100%;
+                margin: auto;
+                z-index: 200;
+                position: fixed;
+                transform: translateY(-20px);
+                animation: slideIn 1s forwards;
+              }
+
+
+              /* New */
 
       .herotext{
         padding-top:100px;
@@ -64,7 +144,16 @@
         margin:auto;
         text-align:center;
         align-items:center;
+        transform: translateY(-20px);
+        animation: slideIn 2s forwards;
       }
+
+
+      /* .herotext h1{
+        transform: translateY(-20px);
+        animation: slideIn 0.2s forwards;
+      } */
+
 
       .starflex{
         display:flex;
@@ -75,10 +164,19 @@
 
       /* Next */
 
+      .background {
+            background-image: url('images/bgfood.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
       .aboutflex{
         display:flex;
         justify-content: space-between;
-        width:85%;
+        width:80%;
         margin:auto;
       }
 
@@ -472,7 +570,7 @@
 
     .reviewimg{
       position:absolute;
-      z-index:100;
+      z-index:50;
       right:0px;
       top:80px;
     }
@@ -514,8 +612,125 @@ footer{
        display:none;
     }
 
+
+
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contentresponsive{
+  display:none;
+}
+
+/* Media query */
+
+.responsivecontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mobilecontainerdiv{
+          z-index:100;
+
+        }
+
+        .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         display:none;
+         width:90%;
+         }
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    opacity: 0; /* Initial state */
+    transform: translateY(100px); /* Initial state */
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.open .overlay-content a {
+    animation: slideUp 0.5s forwards; /* Animation */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
     /* do for 770, 600, 400, 200 */
     @media (max-width: 770px) {
+
+      .scrolled {
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
+    }
+
+    .navbar{
+      display:none;
+    }
 
     .herotext {
     padding-top: 90px;
@@ -742,11 +957,38 @@ footer {
 
   /* Media query */
 
-  .navbar {
-    display: none;
+
+
+        /* .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         width:90%;
+         padding-bottom: 30px;
+        padding-top: 30px;
+         } */
+  /* Media query */
+
+  .scrolled {
+    width:100%;
+    z-index:100;
+    box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
 }
 
-  .responsivecontainer {
+  .navflexmobile{
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         text-align: center;
+         margin:auto;
+         width:90%;
+         padding-bottom: 30px;
+        padding-top: 30px;
+         }
+
+.responsivecontainer {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -756,13 +998,13 @@ footer {
 }
 
 .hamburger {
-  font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
+    color:white;
 }
 
 .mobilecontainerdiv{
           z-index:100;
-          color:white;
         }
 
         .navflexmobile{
@@ -772,7 +1014,6 @@ footer {
          text-align: center;
          margin:auto;
          width:90%;
-         padding-top: 70px;
          }
 
 .overlay {
@@ -829,20 +1070,62 @@ footer {
 }
 
 /* End Nav */
-    }
-
-    /* Styles for devices below 768px */
-@media (max-width: 767px) {
-    body {
-        font-size: 14px;
-    }
+  .content{
+  display:none;
 }
 
-/* Styles for devices below 480px */
-@media (max-width: 479px) {
-    body {
-        font-size: 12px;
+/* End Nav */
     }
+
+
+    @media (max-width: 400px) {
+    .aboutimage img {
+    width:100%;
+  }
+
+  .herotext {
+
+        width: 85%;
+        font-size: 14px;
+        color: white;
+        margin: auto;
+        text-align: center;
+    }
+    }
+
+@media (max-width: 900px) and (min-width: 600px) {
+
+  .aboutimage img {
+    width:100%;
+  }
+
+  .navbar{
+      display:none;
+    }
+
+  .herotext {
+    padding-top: 100px;
+    width: 80%;
+    font-size: 35px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.background {
+    background-image: url(images/bgfood.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+.aboutflex {
+    display: block;
+}
+
 }
 
     </style>
@@ -855,44 +1138,53 @@ footer {
   <div class="iconcircle"> </div>
     <div class="background">
 
-      <div class="navflexmobile">
+      <div class="scrolled">
+        <div class="navflexmobile">
 
-        <div class="navlogo">
-          <img src="./images/annapurnalogo2.png" width="120px">
+          <div class="navlogo">
+            <img src="./images/annapurnalogo2.png" width="150px">
+          </div>
+
+        <div class="mobilecontainerdiv">
+          <div class="mobilecontainer">
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <span class="closebtn" id="closebtn" style="color: white">&times;</span>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <a href="#">Home</a>
+                    <a href="#" class="about">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Menu</a>
+                </div>
+            </div>
+        </div>
         </div>
 
-      <div class="mobilecontainerdiv">
-        <div class="mobilecontainer">
-          <div class="hamburger" id="hamburger">&#9776;</div>
-          <div class="overlay" id="overlay">
-              <div class="overlay-content">
-                  <span class="closebtn" id="closebtn" style="color: white">&times;</span>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <a href="#">Home</a>
-                  <a href="#" class="about">About</a>
-                  <a href="#">Contact</a>
-                  <a href="#">Menu</a>
-              </div>
-          </div>
-      </div>
-      </div>
-
-      </div>
+        </div>
+        </div>
 
         <nav class="navbar">
-            <div class="logo">MyLogo</div>
-            <ul class="nav-links">
+          <div class="navbarwidth">
+            <div>
+              <img src="./images/annapurnalogo2.png" width="150px" />
+            </div>
+
+            <div>
+              <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
+              </ul>
+            </div>
+          </div>
         </nav>
 
         <div class="herotext">
-            <h1> Lorem Ipsum text here for now </h1>
+            <h1> Taste the Flavor of Tradition </h1>
 
             <div class="starflex">
                 <div class="star"> <img src="images/star.png" width="40px"> </div>
@@ -921,10 +1213,13 @@ footer {
       <div class="aboutflex">
 
         <div class="abouttext">
-            <h3> The History </h3>
-            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <br>
-             <p>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <h3> What we cherish </h3>
+            <p> We are proud to keep our cherished cooking traditions alive, passed down from generation to generation. Every dish we make uses authentic flavors and ingredients that are dear to us. We prepare each meal with love and care; We make sure to get our ingredients from local farmers and producers who care about quality and authenticity as much as we do. </p>
+
+            <p> Our commitment goes beyond just cooking. It's about honoring our rich heritage. We blend the stories of our land and its people into our food. Each dish shows the traditions that have been lovingly kept alive over time; so with every bite, you taste a piece of the past that has created our best memories.
+             </p>
+
+             <p> Our goal is to share the warmth and richness of our culture  through our food.  </p>
         </div>
 
         <div class="aboutimage">
@@ -955,16 +1250,18 @@ footer {
         <div class="overlay"></div>
         <div class="mainreviewsinner">
             <div class="box firstcolor">
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                <p>  This South Indian food that hits the spot!
+                  Thanks, Annapurna Tiffins! </p>
             </div>
             <div class="box secondcolor">
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                <p>  Great food, great service, great people. </p>
             </div>
             <div class="box secondcolor">
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                <p>   These guys are both delicious and affordable!
+                  Thank you, Annapurna Tiffins! </p>
             </div>
             <div class="box firstcolor">
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                <p>  My new favorite lunch spot: Annapurna Tiffins! </p>
             </div>
         </div>
     </div>
@@ -1018,38 +1315,58 @@ footer {
       </footer>
 </body>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const overlay = document.getElementById('overlay');
-  const closebtn = document.getElementById('closebtn');
-  const links = document.querySelectorAll('.overlay-link'); // Selected overlay links
-  const navbar = document.querySelector('.navflexmobile'); // Select the single navbar element
+  document.addEventListener('DOMContentLoaded', () => {
+     const hamburger = document.getElementById('hamburger');
+     const overlay = document.getElementById('overlay');
+     const scrolled = document.querySelector('.scrolled');
+     const mobilecontainerdiv = document.querySelector('mobilecontainerdiv');
+     const closebtn = document.getElementById('closebtn');
+     const links = document.querySelectorAll('.overlay-link');
+     const navbardesktop = document.querySelector(".navbar");
+        const navbarwidth = document.querySelector(".navbarwidth");
+        const yearElement = document.getElementById("currentYear");
 
-  window.addEventListener('scroll', function() {
-      if (window.scrollY > 10) {
-          console.log("scrolling down");
-          // navbar.classList.add('scrolled');
-      } else {
-          console.log('scrolling up');
-          // navbar.classList.remove('scrolled');
-      }
-  });
+        // Scroll event listener
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 700) {
+            navbardesktop.classList.add("desktopscrolled");
+            navbarwidth.style.paddingTop = "20px";
+            navbarwidth.style.paddingBottom = "20px";
+             scrolled.style.background = 'white';
+             scrolled.style.position = 'fixed';
+             hamburger.style.color = 'black';
+             scrolled.style.top = '0';
 
-  hamburger.addEventListener('click', () => {
-      overlay.classList.add('open');
-      links.forEach((link, index) => {
-          link.style.animationDelay = `${index * 0.2}s`; // Added delay for each link
-          link.classList.add('slide-up'); // Added class for animation
-      });
-  });
+         } else {
+             console.log('User scrolling up.'); // Debug message
+             navbardesktop.classList.remove("desktopscrolled");
+            navbarwidth.style.paddingTop = "70px";
+            navbarwidth.style.paddingBottom = "70px";
+             navbar.classList.remove('scrolled');
+             scrolled.style.position = '';
+             scrolled.style.background = 'none';
+             hamburger.style.color = 'white';
+         }
+     });
 
-  closebtn.addEventListener('click', () => {
-      overlay.classList.remove('open');
-      links.forEach(link => {
-          link.classList.remove('slide-up'); // Removed class to reset animation
-      });
-  });
-});
-</script>
+     // Hamburger menu click event listener
+     hamburger.addEventListener('click', () => {
+         overlay.classList.add('open'); // Add 'open' class to show overlay
+         links.forEach((link, index) => {
+             link.style.animationDelay = `${index * 0.2}s`; // Add animation delay for each link
+             link.classList.add('slide-up'); // Add 'slide-up' class for animation
+         });
+     });
+
+     // Close button click event listener
+     closebtn.addEventListener('click', () => {
+         overlay.classList.remove('open'); // Remove 'open' class to hide overlay
+         links.forEach(link => {
+             link.classList.remove('slide-up'); // Remove 'slide-up' class to reset animation
+         });
+     });
+ });
+
+   </script>
 
 </html>
