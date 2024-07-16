@@ -352,8 +352,8 @@
     .square1 {
       background-color: #8B290E;
       border: 3px solid white;
-      top: 18px;
-      right:400px;
+      top: 17.5px;
+      margin-left: 20px;
       position: absolute;
       z-index: 1;
       font-weight:700;
@@ -381,12 +381,36 @@
     }
 
     .arrow {
-      position: absolute;
-      top: -90px;
-      left: 43%;
-      z-index:400;
-      transform: translateX(-50%);
+    position: absolute;
+    top: -100px;
+    left: 43%;
+    z-index: 10;
+    transform: translateX(-50%);
+    animation: swing 2s infinite ease-in-out;
+    font-size: 30px;
+}
+
+@keyframes swing {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
     }
+    55% {
+        transform: translateX(-50%) rotate(8deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    /* 50% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    } */
+}
+
 
     .menucheck {
       display: flex;
@@ -536,13 +560,7 @@
     }
 
 .container {
-      /* position: relative;
-      background-image: url('images/dosa.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 200px; */
-
-      position: relative;
+         position: relative;
       width: 100%;
       height: 200px; /* Adjust height as needed */
       background-image: url('images/dosa.jpg');
@@ -553,7 +571,7 @@
       justify-content: center;
       color: white;
       text-align: center;
-      font-size: 24px; /* Adjust font size as needed */
+      font-size: 24px;
       padding: 10px;
     }
 
@@ -577,7 +595,7 @@
 
     .reviewimgtwo{
       position:absolute;
-      z-index:100;
+      z-index:40;
       left:0px;
       bottom:-190px;
     }
@@ -590,7 +608,7 @@
 }
 
 footer{
-      margin-top:300px;
+      margin-top:100px;
       background:#211B18;
       color:white;
       padding-top:60px;
@@ -762,33 +780,21 @@ footer{
 }
 
 .textdesign {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    font-size: 28px;
-    top: -40px;
-    left: 0px;
-    color: transparent;
-    -webkit-text-stroke: 1px #DB9437;
-    white-space: nowrap;
-    opacity: 0.4;
+    display:none;
 }
 
 .textdesigntwo {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    font-size: 28px;
-    top: 20px;
-    left: 0px;
-    color: transparent;
-    -webkit-text-stroke: 1px #DB9437;
-    white-space: nowrap;
-    opacity: 0.6;
+  display:none;
 }
 
 .slanttext {
     opacity: 0.3;
+}
+
+.abouttext p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7rem;
 }
 
 .aboutushead {
@@ -1066,7 +1072,7 @@ footer {
 }
 
 .overlay.open .overlay-content a {
-    animation: slideUp 0.5s forwards; /* Animation */
+    animation: slideUp 0.5s forwards;
 }
 
 /* End Nav */
@@ -1078,7 +1084,7 @@ footer {
     }
 
 
-    @media (max-width: 400px) {
+ @media (max-width: 400px) {
     .aboutimage img {
     width:100%;
   }
@@ -1332,9 +1338,8 @@ footer {
             navbardesktop.classList.add("desktopscrolled");
             navbarwidth.style.paddingTop = "20px";
             navbarwidth.style.paddingBottom = "20px";
-             scrolled.style.background = 'white';
+             scrolled.style.background = '#221d1b';
              scrolled.style.position = 'fixed';
-             hamburger.style.color = 'black';
              scrolled.style.top = '0';
 
          } else {
@@ -1344,7 +1349,6 @@ footer {
             navbarwidth.style.paddingBottom = "70px";
              navbar.classList.remove('scrolled');
              scrolled.style.position = '';
-             scrolled.style.background = 'none';
              hamburger.style.color = 'white';
          }
      });
