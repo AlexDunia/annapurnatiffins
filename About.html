@@ -1,406 +1,399 @@
 <!DOCTYPE html>
-        <html lang="en">
-          <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
-              rel="stylesheet"
-            />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-              rel="stylesheet"
-            />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-              rel="stylesheet"
-            />
-            <title> Annapurna Tiffins - About Us </title>
-            <style>
-              body {
-                margin: 0;
-                padding: 0;
-                font-family: "Merienda", cursive;
-                font-optical-sizing: auto;
-                overflow-x: hidden;
-              }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Annapurna Tiffins - About Us</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Merienda", cursive;
+        font-optical-sizing: auto;
+        overflow-x: hidden;
+      }
 
-              p {
-                font-family: "Roboto", sans-serif;
-                font-weight: 300;
-                font-style: normal;
-              }
+      p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
 
-              .nav-links a:hover {
-                color: #db9437;
-                transform: scale(1.8);
-              }
+      .nav-links a:hover {
+        color: #db9437;
+        transform: scale(1.8);
+      }
 
+      .navbarwidth {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
 
-              .navbarwidth {
-                display: flex;
-                width: 85%;
-                margin: auto;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 70px;
-                padding-bottom: 70px;
-              }
+      .innerbgwidth {
+        width: 80%;
+        margin: auto;
+      }
 
-              .innerbgwidth {
-                width: 80%;
-                margin: auto;
-              }
+      .logo {
+        color: white;
+        font-size: 24px;
+      }
 
-              .logo {
-                color: white;
-                font-size: 24px;
-              }
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
 
-              .nav-links {
-                display: flex;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                flex-grow: 1;
-                justify-content: flex-end;
-              }
+      .nav-links li {
+        margin: 0 20px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideIn 0.8s forwards;
+      }
 
-              .nav-links li {
-                margin: 0 20px;
-                opacity: 0;
-                transform: translateY(-20px);
-                animation: slideIn 0.8s forwards;
-              }
+      .nav-links li:nth-child(1) {
+        animation-delay: 0.2s;
+      }
 
-              .nav-links li:nth-child(1) {
-                animation-delay: 0.2s;
-              }
+      .nav-links li:nth-child(2) {
+        animation-delay: 0.4s;
+      }
 
-              .nav-links li:nth-child(2) {
-                animation-delay: 0.4s;
-              }
+      .nav-links li:nth-child(3) {
+        animation-delay: 0.6s;
+      }
 
-              .nav-links li:nth-child(3) {
-                animation-delay: 0.6s;
-              }
+      .nav-links li:nth-child(4) {
+        animation-delay: 0.8s;
+      }
 
-              .nav-links li:nth-child(4) {
-                animation-delay: 0.8s;
-              }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.7s, transform 0.3s;
+      }
 
-              .nav-links a {
-                color: white;
-                text-decoration: none;
-                font-size: 16px;
-                transition: color 0.7s, transform 0.3s;
-              }
+      .nav-links a:hover {
+        color: #ffd700;
+        transform: scale(1.1);
+      }
 
-              .nav-links a:hover {
-                color: #ffd700;
-                transform: scale(1.1);
-              }
+      @keyframes slideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-              @keyframes slideIn {
-                to {
-                  opacity: 1;
-                  transform: translateY(0);
-                }
-              }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 17px;
+        /* margin-right: 100px; */
+      }
 
-              .nav-links a {
-                color: white;
-                text-decoration: none;
-                font-weight: 200;
-                font-size: 17px;
-                /* margin-right: 100px; */
-              }
+      .desktopscrolled {
+        background: #221d1b;
+        width: 100%;
+        margin: auto;
+        z-index: 200;
+        position: fixed;
+        transform: translateY(-20px);
+        animation: slideIn 1s forwards;
+      }
 
-              .desktopscrolled {
-                background: #221d1b;
-                width: 100%;
-                margin: auto;
-                z-index: 200;
-                position: fixed;
-                transform: translateY(-20px);
-                animation: slideIn 1s forwards;
-              }
+      /* New */
 
-
-              /* New */
-
-      .herotext{
-        padding-top:100px;
+      .herotext {
+        padding-top: 100px;
         width: 33%;
         font-size: 24px;
-        color:white;
-        margin:auto;
-        text-align:center;
-        align-items:center;
+        color: white;
+        margin: auto;
+        text-align: center;
+        align-items: center;
         transform: translateY(-20px);
         animation: slideIn 2s forwards;
       }
-
 
       /* .herotext h1{
         transform: translateY(-20px);
         animation: slideIn 0.2s forwards;
       } */
 
-
-      .starflex{
-        display:flex;
-        margin:auto;
-        width:50%;
+      .starflex {
+        display: flex;
+        margin: auto;
+        width: 50%;
         justify-content: space-around;
       }
 
       /* Next */
 
       .background {
-            background-image: url('images/bgfood.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            width: 100%;
-            position: relative;
-        }
+        background-image: url("images/bgfood.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
 
-      .aboutflex{
-        display:flex;
+      .aboutflex {
+        display: flex;
         justify-content: space-between;
-        width:80%;
-        margin:auto;
+        width: 80%;
+        margin: auto;
       }
 
-      .abouttext{
-        flex-basis:43%;
+      .abouttext {
+        flex-basis: 43%;
       }
 
-      .abouttext h3{
-        font-size:26px;
+      .abouttext h3 {
+        font-size: 26px;
         font-style: italic;
-        font-weight:900;
+        font-weight: 900;
       }
 
-      .aboutimage{
-        flex-basis:40%;
+      .aboutimage {
+        flex-basis: 40%;
       }
 
-      .abouttext p{
-        font-size:17px;
-        font-weight:500;
-        line-height:2rem;
+      .abouttext p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 2rem;
       }
 
       /* Next */
 
-    .reviewbg {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    padding-top:80px;
-    background: #ECF4F0;
-}
+      .reviewbg {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        padding-top: 80px;
+        background: #ecf4f0;
+      }
 
-.reviewbg .overlay {
-    background-image: url('images/outline.png');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height:100vh;
-    opacity: 0.7; /* Adjust the opacity here */
-    position: absolute;
-    top: 0;
-    left: 0;
+      .reviewbg .overlay {
+        background-image: url("images/outline.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.7; /* Adjust the opacity here */
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
-}
+      .mainreviews {
+        padding-top: 100px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        /* background: #F6F6F4; */
+      }
 
+      .mainreviewsinner {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+      }
 
-.mainreviews {
-      padding-top: 100px;
-      margin-top: 80px;
-      margin-bottom: 80px;
-      /* background: #F6F6F4; */
-    }
+      .box {
+        margin-top: 20px;
+        width: 48.7%;
+        /* background-color: #e0e0e0; */
+        margin-bottom: 20px;
+        position: relative;
+      }
 
-    .mainreviewsinner {
-      display: flex;
-      width: 80%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: auto;
-    }
+      .box p {
+        margin-top: 0;
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: 600;
+        line-height: 25px;
+        padding: 39px 40px;
+        font-size: 18px;
+      }
 
-    .box {
-      margin-top: 20px;
-      width: 48.7%;
-      /* background-color: #e0e0e0; */
-      margin-bottom: 20px;
-      position: relative;
-    }
+      .firstcolor {
+        background: #8b290e;
+        color: white;
+      }
 
-    .box p {
-      margin-top: 0;
-      font-family: "Nunito Sans", sans-serif;
-      font-weight: 600;
-      line-height: 25px;
-      padding: 39px 40px;
-      font-size: 18px;
-    }
+      .secondcolor {
+        background: #db9437;
+        color: white;
+      }
 
-    .firstcolor {
-      background: #8B290E;
-      color: white;
-    }
+      /* Second */
 
-    .secondcolor {
-      background: #DB9437;
-      color: white;
-    }
+      .finduscontainer {
+        position: relative;
+        background-image: url("images/dosa.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    /* Second */
+      .finduscontent h1 {
+        color: white;
+        padding: 20px;
+        margin: auto;
+        font-size: 30px;
+        text-align: center;
+        z-index: 2;
+      }
 
+      .socials-container {
+        display: flex;
+        width: 50%;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+      }
 
-    .finduscontainer {
-      position: relative;
-      background-image: url('images/dosa.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 250px;
-      padding-top:30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      .socials {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
 
-    .finduscontent h1 {
-      color: white;
-      padding: 20px;
-      margin: auto;
-      font-size:30px;
-      text-align: center;
-      z-index: 2;
-    }
+      .socials img {
+        width: 20px;
+        height: 20px;
+      }
 
-    .socials-container {
-      display: flex;
-      width: 50%;
-      margin: auto;
-      justify-content: space-around;
-      align-items: center;
-    }
+      .squarecontainer {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .socials {
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
+      .squareinnercontainer {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .socials img {
-      width: 20px;
-      height: 20px;
-    }
+      .square {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        border-radius: 40px;
+        margin: auto;
+      }
 
-    .squarecontainer {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      .newsquare {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: -20px;
+      }
 
-    .squareinnercontainer {
-      position: relative;
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      .square1 {
+        background-color: #8b290e;
+        border: 3px solid white;
+        top: 17.5px;
+        margin-left: 20px;
+        position: absolute;
+        z-index: 1;
+        font-weight: 700;
+        padding-top: 20px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        width: 35%;
+      }
 
-    .square {
-      position: absolute;
-      height: 100px;
-      width: 100%;
-      border-radius: 40px;
-      margin: auto;
-    }
+      .square2 {
+        background-color: #db9437;
+        border: 3px solid white;
+        z-index: 2;
+        width: 35%;
+        position: absolute;
+        top: 5px;
+        font-weight: 700;
+        padding-top: 20px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
 
-    .newsquare {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      top: -20px;
-    }
+      .arrow {
+        position: absolute;
+        top: -100px;
+        left: 43%;
+        z-index: 10;
+        transform: translateX(-50%);
+        animation: swing 2s infinite ease-in-out;
+        font-size: 30px;
+      }
 
-    .square1 {
-      background-color: #8B290E;
-      border: 3px solid white;
-      top: 17.5px;
-      margin-left: 20px;
-      position: absolute;
-      z-index: 1;
-      font-weight:700;
-      padding-top:20px;
-      padding-right:25px;
-      padding-left:25px;
-      padding-bottom:20px;
-      width: 35%;
-    }
-
-    .square2 {
-      background-color: #DB9437;
-      border: 3px solid white;
-      z-index: 2;
-      width: 35%;
-      position: absolute;
-      top: 5px;
-      font-weight:700;
-      padding-top:20px;
-      padding-right:25px;
-      padding-left:25px;
-      padding-bottom:20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .arrow {
-    position: absolute;
-    top: -100px;
-    left: 43%;
-    z-index: 10;
-    transform: translateX(-50%);
-    animation: swing 2s infinite ease-in-out;
-    font-size: 30px;
-}
-
-@keyframes swing {
-    0% {
-        transform: translateX(-50%) rotate(0deg);
-    }
-    55% {
-        transform: translateX(-50%) rotate(8deg);
-    }
-    100% {
-        transform: translateX(-50%) rotate(0deg);
-    }
-    /* 50% {
+      @keyframes swing {
+        0% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        55% {
+          transform: translateX(-50%) rotate(8deg);
+        }
+        100% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        /* 50% {
         transform: translateX(-50%) rotate(0deg);
     }
     75% {
@@ -409,561 +402,565 @@
     100% {
         transform: translateX(-50%) rotate(0deg);
     } */
-}
+      }
 
-
-    .menucheck {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      align-items: center;
-    }
-
-    .menucheck h1, .menucheck h2 {
-      margin: 0;
-    }
-
-    .confirmmenucheck{
-      color:white;
-      line-height:1rem;
-      flex-basis: 40%;
-      line-height:2rem;
-      text-align:left;
-    }
-
-    .confirmmenucheck{
-     font-size: 13px;
-    }
-
-    .confirmmenucheckbutton{
-      color:white;
-      line-height:1.4rem;
-      padding: 10px 6px;
-      background:#8B290E;
-      border:white 3px solid;
-      border-radius:35px;
-      font-size:12px;
-      font-weight:500;
-      text-align:center;
-      flex-basis:40%;
-    }
-
-    .slant{
-      position:relative;
-    }
-
-    .slanttext{
-  position: absolute;
-  z-index: 100;
-  top: 50px;
-  width: 100%;
-  font-size: 110px;
-  color: transparent; /* Make the fill color transparent */
-  -webkit-text-stroke: 1px #DB9437; /* Add stroke to the text */
-  transform: rotate(90deg);
-  transform-origin: left top; /* Adjust origin if necessary */
-  white-space: nowrap; /* Prevent text wrapping */
-  opacity:0.7;
-  left: 80px; /* Adjust left position to fit the rotated text */
-    }
-
-    .iconcircle {
-    width: 20px;
-    height: 20px;
-    padding: 150px;
-    position:absolute;
-    bottom:-50px;
-    right:-290px;
-    border:black 4px solid;
-    background: white;
-    border-radius: 50%;
-    z-index:100;
-    overflow: hidden;
-}
-
-
-.aboutbg{
-  position:relative;
-}
-
-
-.textdesign{
-  position:absolute;
-  z-index: 100;
-  /* top: 20px; */
-  width: 100%;
-  font-size:55px;
-  top:-60px;
-  left:-70px;
-  color: transparent; /* Make the fill color transparent */
-  -webkit-text-stroke: 1px #DB9437; /* Add stroke to the text */
-  white-space: nowrap; /* Prevent text wrapping */
-  opacity:0.3;
-}
-
-
-.textdesigntwo{
-  position:absolute;
-  /* top: 20px; */
-  width: 100%;
-  font-size:55px;
-  top:40px;
-  left:40px;
-  color: transparent; /* Make the fill color transparent */
-  -webkit-text-stroke: 1px #DB9437; /* Add stroke to the text */
-  white-space: nowrap; /* Prevent text wrapping */
-  opacity:0.3;
-}
-
-
-.text-design h1{
-  margin:0;
-  padding:0;
-  line-height:1px;
-}
-
-.textimg{
-  top:-60px;
-  position:absolute;
-}
-
-.textimgtwo{
-  position:absolute;
-  bottom:0px;
-  right:0px;
-}
-
-.aboutflexbg {
-  position:relative;
-}
-
-.aboutushead{
-   margin-top:130px;
-   margin-bottom:70px;
-   display:flex;
-   font-weight:700;
-   font-size:17px;
-   justify-content:center;
-}
-
-/* Next */
-
-.container::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark overlay for better text readability */
-      z-index: 1;
-    }
-
-.container {
-         position: relative;
-      width: 100%;
-      height: 200px; /* Adjust height as needed */
-      background-image: url('images/dosa.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      font-size: 24px;
-      padding: 10px;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* New */
-
-    .reviewposition{
-      position:relative;
-    }
-
-    .reviewimg{
-      position:absolute;
-      z-index:50;
-      right:0px;
-      top:80px;
-    }
-
-    .reviewimgtwo{
-      position:absolute;
-      z-index:40;
-      left:0px;
-      bottom:-190px;
-    }
-
-    .reviewimgthree {
-    position: absolute;
-    z-index: 100;
-    right: 0px;
-    bottom: -600px;
-}
-
-footer{
-      margin-top:100px;
-      background:#211B18;
-      color:white;
-      padding-top:60px;
-    }
-
-    .mainfooter{
-      width:80%;
-      margin:auto;
-      padding-bottom:50px;
-      text-align:center;
-    }
-
-    footer p{
-      color:rgb(160, 159, 159);
-      padding-top:30px;
-    }
-
-    .navflexmobile {
-       display:none;
-    }
-
-
-
-
-    @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.contentresponsive{
-  display:none;
-}
-
-/* Media query */
-
-.responsivecontainer {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.mobilecontainerdiv{
-          z-index:100;
-
-        }
-
-        .navflexmobile{
-         display:flex;
-         justify-content: space-between;
-         align-items: center;
-         text-align: center;
-         margin:auto;
-         display:none;
-         width:90%;
-         }
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    z-index: 100;
-    visibility: hidden;
-}
-
-.overlay-content {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 200;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    opacity: 0; /* Initial state */
-    transform: translateY(100px); /* Initial state */
-}
-
-.overlay-content a:hover {
-    color: #f1f1f1;
-}
-
-.closebtn {
-    font-size: 60px;
-    font-weight: 200;
-    cursor: pointer;
-}
-
-.overlay.open {
-    opacity: 1;
-    visibility: visible;
-}
-
-.overlay.open .overlay-content a {
-    animation: slideUp 0.5s forwards; /* Animation */
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-    /* do for 770, 600, 400, 200 */
-    @media (max-width: 770px) {
-
-      .scrolled {
+      .menucheck {
+        display: flex;
+        justify-content: space-around;
         width: 100%;
-        z-index: 100;
-        box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
-    }
+        align-items: center;
+      }
 
-    .navbar{
-      display:none;
-    }
+      .menucheck h1,
+      .menucheck h2 {
+        margin: 0;
+      }
 
-    .herotext {
-    padding-top: 90px;
-    width: 90%;
-    font-size: 20px;
-    color: white;
-    margin: auto;
-    text-align:center;
-}
+      .confirmmenucheck {
+        color: white;
+        line-height: 1rem;
+        flex-basis: 40%;
+        line-height: 2rem;
+        text-align: left;
+      }
 
-.starflex {
-    display: flex;
-    margin: auto;
-    width: 70%;
-    justify-content: space-around;
-}
+      .confirmmenucheck {
+        font-size: 13px;
+      }
 
-.background {
-    background-image: url(images/bgfood.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    width: 100%;
-    position: relative;
-}
-
-.iconcircle {
-   display:none;
-}
-
-.textdesign {
-    display:none;
-}
-
-.textdesigntwo {
-  display:none;
-}
-
-.slanttext {
-    opacity: 0.3;
-}
-
-.abouttext p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.7rem;
-}
-
-.aboutushead {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    display: flex;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.aboutflex {
-    z-index:10;
-    display: block;
-    width: 85%;
-    margin: auto;
-}
-
-.abouttext h3{
-    display:none;
-}
-
-.abouttext{
-  text-align: justify;
-}
-
-.textimg {
-    top: -120px;
-    position: absolute;
-}
-
-.textimg img{
-    width:90px;
-}
-
-.aboutimage{
-  margin-top:50px;
-}
-
-.aboutimage img {
-    width:100%;
-}
-
-.aboutflex{
-  width:80%;
-}
-
-.container {
-    height: 150px;
-}
-
-.content {
-    font-size: 11px;
-}
-
-.content h1{
-  font-weight:200;
-  font-style: italic;
-}
-
-.box p {
+      .confirmmenucheckbutton {
+        color: white;
+        line-height: 1.4rem;
+        padding: 10px 6px;
+        background: #8b290e;
+        border: white 3px solid;
+        border-radius: 35px;
+        font-size: 12px;
         font-weight: 500;
-        line-height: 25px;
-        padding: 20px 20px;
-        font-size: 18px;
-    }
+        text-align: center;
+        flex-basis: 40%;
+      }
 
-    .mainreviewsinner {
-    display: block;
-}
+      .slant {
+        position: relative;
+      }
 
-    .firstcolor {
-        width: 100%;
-        background: #8B290E;
-        color: white;
-        margin-bottom: 30px;
-        border: 1px solid black;
-    }
-
-    .secondcolor {
-        width: 100%;
-        background: #DB9437;
-        color: white;
-        margin-bottom: 30px;
-        border: 2px solid black;
-    }
-
-    .newsquare {
-    display:none;
-}
-
-.arrow {
-   display:none;
-}
-
-.squareinnercontainer {
-    display:none;
-}
-
-.squarecontainer {
-    display:none;
-}
-
-.reviewbg {
-    padding-top: 50px;
-}
-
-.finduscontainer {
-    height: 170px;
-    padding-top:0;
-    display: flex;
-}
-
-.reviewimgtwo {
-    position: absolute;
-    z-index: 100;
-    left: -30px;
-    bottom: -190px;
-}
-
-.reviewimgthree {
+      .slanttext {
         position: absolute;
         z-index: 100;
-        right:0;
-        bottom: -390px;
-    }
+        top: 50px;
+        width: 100%;
+        font-size: 110px;
+        color: transparent; /* Make the fill color transparent */
+        -webkit-text-stroke: 1px #db9437; /* Add stroke to the text */
+        transform: rotate(90deg);
+        transform-origin: left top; /* Adjust origin if necessary */
+        white-space: nowrap; /* Prevent text wrapping */
+        opacity: 0.7;
+        left: 80px; /* Adjust left position to fit the rotated text */
+      }
 
-.finduscontent h1 {
-    font-size: 25px;
-    font-weight:300;
-}
+      .iconcircle {
+        width: 20px;
+        height: 20px;
+        padding: 150px;
+        position: absolute;
+        bottom: -50px;
+        right: -290px;
+        border: black 4px solid;
+        background: white;
+        border-radius: 50%;
+        z-index: 100;
+        overflow: hidden;
+      }
 
-.reviewbg {
-    height:auto;
-    padding-bottom:30px;
-}
+      .aboutbg {
+        position: relative;
+      }
 
-.reviewbg .overlay {
-        display: none !important; /* Adding !important to override any other styles */
-    }
+      .textdesign {
+        position: absolute;
+        z-index: 100;
+        /* top: 20px; */
+        width: 100%;
+        font-size: 55px;
+        top: -60px;
+        left: -70px;
+        color: transparent; /* Make the fill color transparent */
+        -webkit-text-stroke: 1px #db9437; /* Add stroke to the text */
+        white-space: nowrap; /* Prevent text wrapping */
+        opacity: 0.3;
+      }
 
-.socials-container {
-    width:75%;
-}
+      .textdesigntwo {
+        position: absolute;
+        /* top: 20px; */
+        width: 100%;
+        font-size: 55px;
+        top: 40px;
+        left: 40px;
+        color: transparent; /* Make the fill color transparent */
+        -webkit-text-stroke: 1px #db9437; /* Add stroke to the text */
+        white-space: nowrap; /* Prevent text wrapping */
+        opacity: 0.3;
+      }
 
-.reviewimgthree {
-    display:none;
-}
+      .text-design h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1px;
+      }
 
-.reviewimg {
-  right: -100px;
-}
+      .textimg {
+        top: -60px;
+        position: absolute;
+      }
 
-footer {
-    margin-top: 70px;
-    background: #211B18;
-    color: white;
-    padding-top: 60px;
-}
+      .textimgtwo {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+      .aboutflexbg {
+        position: relative;
+      }
 
-  /* Media query */
+      .aboutushead {
+        margin-top: 130px;
+        margin-bottom: 70px;
+        display: flex;
+        font-weight: 700;
+        font-size: 17px;
+        justify-content: center;
+      }
 
+      /* Next */
 
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Optional: adds a dark overlay for better text readability */
+        z-index: 1;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        background-image: url("images/dosa.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        padding: 10px;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* New */
+
+      .reviewposition {
+        position: relative;
+      }
+
+      .reviewimg {
+        position: absolute;
+        z-index: 50;
+        right: 0px;
+        top: 80px;
+      }
+
+      .reviewimgtwo {
+        position: absolute;
+        z-index: 40;
+        left: 0px;
+        bottom: -190px;
+      }
+
+      .reviewimgthree {
+        position: absolute;
+        z-index: 100;
+        right: 0px;
+        bottom: -600px;
+      }
+
+      footer {
+        margin-top: 100px;
+        background: #211b18;
+        color: white;
+        padding-top: 60px;
+      }
+
+      .mainfooter {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 50px;
+        text-align: center;
+      }
+
+      footer p {
+        color: rgb(160, 159, 159);
+        padding-top: 30px;
+      }
+
+      .navflexmobile {
+        display: none;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .contentresponsive {
+        display: none;
+      }
+
+      /* Media query */
+
+      .responsivecontainer {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .mobilecontainerdiv {
+        z-index: 100;
+      }
+
+      .navflexmobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        display: none;
+        width: 90%;
+      }
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+        opacity: 0;
+        z-index: 100;
+        visibility: hidden;
+      }
+
+      .overlay-content {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .overlay-content a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 200;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        opacity: 0; /* Initial state */
+        transform: translateY(100px); /* Initial state */
+      }
+
+      .overlay-content a:hover {
+        color: #f1f1f1;
+      }
+
+      .closebtn {
+        font-size: 60px;
+        font-weight: 200;
+        cursor: pointer;
+      }
+
+      .overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .overlay.open .overlay-content a {
+        animation: slideUp 0.5s forwards; /* Animation */
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* do for 770, 600, 400, 200 */
+      @media (max-width: 770px) {
+        .scrolled {
+          width: 100%;
+          z-index: 100;
+          box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
+        }
+
+        .textimgtwo {
+          display: none;
+        }
+
+        .navbar {
+          display: none;
+        }
+
+        .herotext {
+          padding-top: 90px;
+          width: 90%;
+          font-size: 20px;
+          color: white;
+          margin: auto;
+          text-align: center;
+        }
+
+        .starflex {
+          display: flex;
+          margin: auto;
+          width: 70%;
+          justify-content: space-around;
+        }
+
+        .background {
+          background-image: url(images/bgfood.jpg);
+          background-size: cover;
+          background-position: center;
+          height: 70vh;
+          width: 100%;
+          position: relative;
+        }
+
+        .iconcircle {
+          display: none;
+        }
+
+        .textdesign {
+          display: none;
+        }
+
+        .textdesigntwo {
+          display: none;
+        }
+
+        .slanttext {
+          opacity: 0.3;
+        }
+
+        .abouttext p {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.7rem;
+        }
+
+        .aboutushead {
+          margin-top: 30px;
+          margin-bottom: 10px;
+          display: flex;
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .aboutflex {
+          z-index: 10;
+          display: block;
+          width: 85%;
+          margin: auto;
+        }
+
+        .abouttext h3 {
+          display: none;
+        }
+
+        .abouttext {
+          text-align: justify;
+        }
+
+        .textimg {
+          top: -120px;
+          position: absolute;
+        }
+
+        .textimg img {
+          width: 90px;
+        }
+
+        .aboutimage {
+          margin-top: 50px;
+        }
+
+        .aboutimage img {
+          width: 100%;
+        }
+
+        .aboutflex {
+          width: 80%;
+        }
+
+        .container {
+          height: 150px;
+        }
+
+        .content {
+          font-size: 12px;
+        }
+
+        .content h1 {
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        .box p {
+          font-weight: 400;
+          line-height: 25px;
+          padding: 20px 20px;
+          font-size: 14.5px;
+          font-family: "Merienda", cursive;
+        }
+
+        .mainreviewsinner {
+          display: block;
+        }
+
+        .firstcolor {
+          width: 100%;
+          background: #8b290e;
+          color: white;
+          margin-bottom: 30px;
+          border: 1px solid rgba(0, 0, 0, 0.3); /* Reduced opacity for the border */
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .secondcolor {
+          width: 100%;
+          background: #db9437;
+          color: white;
+          margin-bottom: 30px;
+          border: 2px solid rgba(0, 0, 0, 0.3); /* Reduced opacity for the border */
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .newsquare {
+          display: none;
+        }
+
+        .arrow {
+          display: none;
+        }
+
+        .squareinnercontainer {
+          display: none;
+        }
+
+        .squarecontainer {
+          display: none;
+        }
+
+        .reviewbg {
+          padding-top: 50px;
+        }
+
+        .finduscontainer {
+          height: 170px;
+          padding-top: 0;
+          display: flex;
+        }
+
+        .reviewimgtwo {
+          position: absolute;
+          z-index: 100;
+          left: -30px;
+          bottom: -190px;
+        }
+
+        .reviewimgthree {
+          position: absolute;
+          z-index: 100;
+          right: 0;
+          bottom: -390px;
+        }
+
+        .finduscontent h1 {
+          font-size: 25px;
+          font-weight: 300;
+        }
+
+        .reviewbg {
+          height: auto;
+          padding-bottom: 30px;
+        }
+
+        .reviewbg .overlay {
+          display: none !important; /* Adding !important to override any other styles */
+        }
+
+        .socials-container {
+          width: 75%;
+        }
+
+        .reviewimgthree {
+          display: none;
+        }
+
+        .reviewimg {
+          right: -100px;
+        }
+
+        footer {
+          margin-top: 70px;
+          background: #211b18;
+          color: white;
+          padding-top: 60px;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Media query */
 
         /* .navflexmobile{
          display:flex;
@@ -975,207 +972,195 @@ footer {
          padding-bottom: 30px;
         padding-top: 30px;
          } */
-  /* Media query */
+        /* Media query */
 
-  .scrolled {
-    width:100%;
-    z-index:100;
-    box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
-}
-
-  .navflexmobile{
-         display:flex;
-         justify-content: space-between;
-         align-items: center;
-         text-align: center;
-         margin:auto;
-         width:90%;
-         padding-bottom: 30px;
-        padding-top: 30px;
-         }
-
-.responsivecontainer {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    color:white;
-}
-
-.mobilecontainerdiv{
-          z-index:100;
+        .scrolled {
+          width: 100%;
+          z-index: 100;
+          box-shadow: 0 2px 5px rgba(26, 25, 25, 0.1);
         }
 
-        .navflexmobile{
-         display:flex;
-         justify-content: space-between;
-         align-items: center;
-         text-align: center;
-         margin:auto;
-         width:90%;
-         }
+        .navflexmobile {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          margin: auto;
+          width: 90%;
+          padding-bottom: 30px;
+          padding-top: 30px;
+        }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    z-index: 100;
-    visibility: hidden;
-}
+        .responsivecontainer {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-.overlay-content {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
-}
+        .hamburger {
+          font-size: 30px;
+          cursor: pointer;
+          color: white;
+        }
 
-.overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 100;
-    color: white;
-    margin-bottom:30px;
-    display: block;
-    transition: 0.3s;
-    opacity: 0; /* Initial state */
-    transform: translateY(100px); /* Initial state */
-}
+        .mobilecontainerdiv {
+          z-index: 100;
+        }
 
-.overlay-content a:hover {
-    color: #f1f1f1;
-}
+        .navflexmobile {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          margin: auto;
+          width: 90%;
+        }
 
-.closebtn {
-    font-size: 60px;
-    font-weight: 200;
-    cursor: pointer;
-}
+        .overlay {
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.9);
+          overflow-x: hidden;
+          transition: opacity 0.5s, visibility 0.5s;
+          opacity: 0;
+          z-index: 100;
+          visibility: hidden;
+        }
 
-.overlay.open {
-    opacity: 1;
-    visibility: visible;
-}
+        .overlay-content {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          margin-top: 100px;
+        }
 
-.overlay.open .overlay-content a {
-    animation: slideUp 0.5s forwards;
-}
+        .overlay-content a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 100;
+          color: white;
+          margin-bottom: 30px;
+          display: block;
+          transition: 0.3s;
+          opacity: 0; /* Initial state */
+          transform: translateY(100px); /* Initial state */
+        }
 
-/* End Nav */
-  .content{
-  display:none;
-}
+        .overlay-content a:hover {
+          color: #f1f1f1;
+        }
 
-/* End Nav */
-    }
+        .closebtn {
+          font-size: 60px;
+          font-weight: 200;
+          cursor: pointer;
+        }
 
+        .overlay.open {
+          opacity: 1;
+          visibility: visible;
+        }
 
- @media (max-width: 400px) {
-    .aboutimage img {
-    width:100%;
-  }
+        .overlay.open .overlay-content a {
+          animation: slideUp 0.5s forwards;
+        }
 
-  .herotext {
+        /* End Nav */
+      }
 
-        width: 85%;
-        font-size: 14px;
-        color: white;
-        margin: auto;
-        text-align: center;
-    }
-    }
+      @media (max-width: 400px) {
+        .aboutimage img {
+          width: 100%;
+        }
 
-@media (max-width: 900px) and (min-width: 600px) {
+        .herotext {
+          width: 85%;
+          font-size: 14px;
+          color: white;
+          margin: auto;
+          text-align: center;
+        }
+      }
 
-  .aboutimage img {
-    width:100%;
-  }
+      @media (max-width: 900px) and (min-width: 600px) {
+        .aboutimage img {
+          width: 100%;
+        }
 
-  .navbar{
-      display:none;
-    }
+        .navbar {
+          display: none;
+        }
 
-  .herotext {
-    padding-top: 100px;
-    width: 80%;
-    font-size: 35px;
-    color: white;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-}
+        .herotext {
+          padding-top: 100px;
+          width: 80%;
+          font-size: 35px;
+          color: white;
+          margin: auto;
+          text-align: center;
+          align-items: center;
+        }
 
-.background {
-    background-image: url(images/bgfood.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    width: 100%;
-    position: relative;
-}
+        .background {
+          background-image: url(images/bgfood.jpg);
+          background-size: cover;
+          background-position: center;
+          height: 70vh;
+          width: 100%;
+          position: relative;
+        }
 
-.aboutflex {
-    display: block;
-}
-
-}
-
+        .aboutflex {
+          display: block;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="slant">
+      <div class="slanttext">ANNAPURNA TIFFINS</div>
+      <div class="iconcircle"></div>
+      <div class="background">
+        <div class="scrolled">
+          <div class="navflexmobile">
+            <div class="navlogo">
+              <img src="./images/annapurnalogo2.png" width="120px" />
+            </div>
 
-  <div class="slant">
-  <div class="slanttext"> ANNAPURNA TIFFINS </div>
-  <div class="iconcircle"> </div>
-    <div class="background">
-
-      <div class="scrolled">
-        <div class="navflexmobile">
-
-          <div class="navlogo">
-            <img src="./images/annapurnalogo2.png" width="150px">
-          </div>
-
-        <div class="mobilecontainerdiv">
-          <div class="mobilecontainer">
-            <div class="hamburger" id="hamburger">&#9776;</div>
-            <div class="overlay" id="overlay">
-                <div class="overlay-content">
-                    <span class="closebtn" id="closebtn" style="color: white">&times;</span>
-                    <br/>
-                    <br/>
-                    <br/>
+            <div class="mobilecontainerdiv">
+              <div class="mobilecontainer">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <div class="overlay" id="overlay">
+                  <div class="overlay-content">
+                    <span class="closebtn" id="closebtn" style="color: white"
+                      >&times;</span
+                    >
+                    <br />
+                    <br />
+                    <br />
                     <a href="#">Home</a>
                     <a href="#" class="about">About</a>
                     <a href="#">Contact</a>
                     <a href="#">Menu</a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-        </div>
-
-        </div>
+          </div>
         </div>
 
         <nav class="navbar">
           <div class="navbarwidth">
             <div>
-              <img src="./images/annapurnalogo2.png" width="150px" />
+              <img src="./images/annapurnalogo2.png" width="120px" />
             </div>
 
             <div>
@@ -1190,187 +1175,205 @@ footer {
         </nav>
 
         <div class="herotext">
-            <h1> Taste the Flavor of Tradition </h1>
+          <h1>Taste the Flavor of Tradition</h1>
 
-            <div class="starflex">
-                <div class="star"> <img src="images/star.png" width="40px"> </div>
-                <div class="star"> <img src="images/star.png" width="40px"> </div>
-                <div class="star"> <img src="images/star.png" width="40px"> </div>
-                <div class="star"> <img src="images/star.png" width="40px"> </div>
-                <div class="star"> <img src="images/star.png" width="40px"> </div>
-            </div>
+          <div class="starflex">
+            <div class="star"><img src="images/star.png" width="40px" /></div>
+            <div class="star"><img src="images/star.png" width="40px" /></div>
+            <div class="star"><img src="images/star.png" width="40px" /></div>
+            <div class="star"><img src="images/star.png" width="40px" /></div>
+            <div class="star"><img src="images/star.png" width="40px" /></div>
+          </div>
         </div>
-
+      </div>
     </div>
-  </div>
 
     <div class="aboutbg">
-      <div class="textdesign"> <h1> ANNAPURNA TIFFINS </h1> </div>
-      <div class="textdesigntwo"> <h1> ANNAPURNA TIFFINS </h1> </div>
+      <div class="textdesign"><h1>ANNAPURNA TIFFINS</h1></div>
+      <div class="textdesigntwo"><h1>ANNAPURNA TIFFINS</h1></div>
     </div>
 
     <div class="aboutushead">
-      <h2> About us </h2>
-      </div>
+      <h2>About us</h2>
+    </div>
 
     <div class="aboutflexbg">
-      <div class="textimg"> <img src="images/Kebab.png" width="200px"> </div>
-      <div class="textimgtwo"> <img src="images/Kebabone.png" width="100px"> </div>
+      <div class="textimg"><img src="images/Kebab.png" width="200px" /></div>
+      <div class="textimgtwo">
+        <img src="images/Kebabone.png" width="100px" />
+      </div>
       <div class="aboutflex">
-
         <div class="abouttext">
-            <h3> What we cherish </h3>
-            <p> We are proud to keep our cherished cooking traditions alive, passed down from generation to generation. Every dish we make uses authentic flavors and ingredients that are dear to us. We prepare each meal with love and care; We make sure to get our ingredients from local farmers and producers who care about quality and authenticity as much as we do. </p>
+          <h3>What we cherish</h3>
+          <p>
+            We are proud to keep our cherished cooking traditions alive, passed
+            down from generation to generation. Every dish we make uses
+            authentic flavors and ingredients that are dear to us. We prepare
+            each meal with love and care; We make sure to get our ingredients
+            from local farmers and producers who care about quality and
+            authenticity as much as we do.
+          </p>
 
-            <p> Our commitment goes beyond just cooking. It's about honoring our rich heritage. We blend the stories of our land and its people into our food. Each dish shows the traditions that have been lovingly kept alive over time; so with every bite, you taste a piece of the past that has created our best memories.
-             </p>
+          <p>
+            Our commitment goes beyond just cooking. It's about honoring our
+            rich heritage. We blend the stories of our land and its people into
+            our food. Each dish shows the traditions that have been lovingly
+            kept alive over time; so with every bite, you taste a piece of the
+            past that has created our best memories.
+          </p>
 
-             <p> Our goal is to share the warmth and richness of our culture  through our food.  </p>
+          <p>
+            Our goal is to share the warmth and richness of our culture through
+            our food.
+          </p>
         </div>
 
         <div class="aboutimage">
-            <img src="images/grey.png">
+          <img src="images/grey.png" />
         </div>
-
-    </div>
-
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="content">
-        <h1> People LOVE US!!! </h1>
       </div>
     </div>
 
-   <div class="reviewposition">
-    <div class="reviewimg"> <img src="images/dosa.png" width="200px"> </div>
-    <div class="reviewimgtwo"> <img src="images/soda.png" width="200px"> </div>
-    <div class="reviewimgthree"> <img src="images/sodaone.png" width="200px"> </div>
-    <div class="reviewbg">
-        <div class="overlay"></div>
-        <div class="mainreviewsinner">
-            <div class="box firstcolor">
-                <p>  This South Indian food that hits the spot!
-                  Thanks, Annapurna Tiffins! </p>
-            </div>
-            <div class="box secondcolor">
-                <p>  Great food, great service, great people. </p>
-            </div>
-            <div class="box secondcolor">
-                <p>   These guys are both delicious and affordable!
-                  Thank you, Annapurna Tiffins! </p>
-            </div>
-            <div class="box firstcolor">
-                <p>  My new favorite lunch spot: Annapurna Tiffins! </p>
-            </div>
-        </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="content">
+        <h1>People LOVE US!!!</h1>
+      </div>
     </div>
 
-  </div>
-
-    <div class="finduscontainer">
-        <div class="finduscontent">
-          <h1>Find us on Social Media</h1>
-          <div class="socials-container">
-            <div class="socials">
-              <img src="./images/facebook.png" alt="Facebook">
-            </div>
-            <div class="socials">
-              <img src="./images/xlogo.png" alt="XLogo">
-            </div>
-            <div class="socials">
-              <img src="./images/xlogo.png" alt="XLogo">
-            </div>
+    <div class="reviewposition">
+      <div class="reviewimg"><img src="images/dosa.png" width="200px" /></div>
+      <div class="reviewimgtwo">
+        <img src="images/soda.png" width="200px" />
+      </div>
+      <div class="reviewimgthree">
+        <img src="images/sodaone.png" width="200px" />
+      </div>
+      <div class="reviewbg">
+        <div class="overlay"></div>
+        <div class="mainreviewsinner">
+          <div class="box firstcolor">
+            <p>
+              This South Indian food that hits the spot! Thanks, Annapurna
+              Tiffins!
+            </p>
+          </div>
+          <div class="box secondcolor">
+            <p>Great food, great service, great people.</p>
+          </div>
+          <div class="box secondcolor">
+            <p>
+              These guys are both delicious and affordable! Thank you, Annapurna
+              Tiffins!
+            </p>
+          </div>
+          <div class="box firstcolor">
+            <p>My new favorite lunch spot: Annapurna Tiffins!</p>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="squarecontainer">
-          <div class="squareinnercontainer">
-            <div class="arrow">
-              <img src="images/arrowdown.png" width="150px">
-            </div>
+    <div class="finduscontainer">
+      <div class="finduscontent">
+        <h1>Find us on Social Media</h1>
+        <div class="socials-container">
+          <div class="socials">
+            <img src="./images/facebook.png" alt="Facebook" />
+          </div>
+          <div class="socials">
+            <img src="./images/xlogo.png" alt="XLogo" />
+          </div>
+          <div class="socials">
+            <img src="./images/xlogo.png" alt="XLogo" />
+          </div>
+        </div>
+      </div>
 
-            <div class="newsquare">
-              <div class="square square1"></div>
-              <div class="square square2">
-                <div class="menucheck">
-                  <div class="confirmmenucheck">
-                    <h1>Have you seen our menu?</h1>
-                  </div>
-                  <div class="confirmmenucheckbutton">
-                    <h2>Not yet<br>but I want to</h2>
-                  </div>
+      <div class="squarecontainer">
+        <div class="squareinnercontainer">
+          <div class="arrow">
+            <img src="images/arrowdown.png" width="150px" />
+          </div>
+
+          <div class="newsquare">
+            <div class="square square1"></div>
+            <div class="square square2">
+              <div class="menucheck">
+                <div class="confirmmenucheck">
+                  <h1>Have you seen our menu?</h1>
+                </div>
+                <div class="confirmmenucheckbutton">
+                  <h2>Not yet<br />but I want to</h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <footer>
-        <div class="mainfooter">
-          <hr>
-          <p>  Copyright 2024 </p>
-        </div>
-      </footer>
-</body>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-     const hamburger = document.getElementById('hamburger');
-     const overlay = document.getElementById('overlay');
-     const scrolled = document.querySelector('.scrolled');
-     const mobilecontainerdiv = document.querySelector('mobilecontainerdiv');
-     const closebtn = document.getElementById('closebtn');
-     const links = document.querySelectorAll('.overlay-link');
-     const navbardesktop = document.querySelector(".navbar");
-        const navbarwidth = document.querySelector(".navbarwidth");
-        const yearElement = document.getElementById("currentYear");
+    <footer>
+      <div class="mainfooter">
+        <hr />
+        <p>Copyright 2024</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.getElementById("hamburger");
+      const overlay = document.getElementById("overlay");
+      const scrolled = document.querySelector(".scrolled");
+      const mobilecontainerdiv = document.querySelector("mobilecontainerdiv");
+      const closebtn = document.getElementById("closebtn");
+      const links = document.querySelectorAll(".overlay-link");
+      const navbardesktop = document.querySelector(".navbar");
+      const navbarwidth = document.querySelector(".navbarwidth");
+      const yearElement = document.getElementById("currentYear");
 
-        // Scroll event listener
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 700) {
-            navbardesktop.classList.add("desktopscrolled");
-            navbarwidth.style.paddingTop = "20px";
-            navbarwidth.style.paddingBottom = "20px";
-             scrolled.style.background = '#221d1b';
-             scrolled.style.position = 'fixed';
-             scrolled.style.top = '0';
+      // Scroll event listener
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 700) {
+          navbardesktop.classList.add("desktopscrolled");
+          navbarwidth.style.paddingTop = "20px";
+          navbarwidth.style.paddingBottom = "20px";
+          scrolled.style.background = "#221d1b";
+          scrolled.style.position = "fixed";
+          scrolled.style.top = "0";
+        } else {
+          console.log("User scrolling up."); // Debug message
+          navbardesktop.classList.remove("desktopscrolled");
+          navbarwidth.style.paddingTop = "70px";
+          navbarwidth.style.paddingBottom = "70px";
+          scrolled.style.position = "";
+          scrolled.style.background = "";
+          scrolled.style.top = "";
+          hamburger.style.color = "white";
+        }
+      });
 
-         } else {
-             console.log('User scrolling up.'); // Debug message
-             navbardesktop.classList.remove("desktopscrolled");
-            navbarwidth.style.paddingTop = "70px";
-            navbarwidth.style.paddingBottom = "70px";
-             navbar.classList.remove('scrolled');
-             scrolled.style.position = '';
-             hamburger.style.color = 'white';
-         }
-     });
+      // Hamburger menu click event listener
+      hamburger.addEventListener("click", () => {
+        overlay.classList.add("open"); // Add 'open' class to show overlay
+        links.forEach((link, index) => {
+          link.style.animationDelay = `${index * 0.2}s`; // Add animation delay for each link
+          link.classList.add("slide-up"); // Add 'slide-up' class for animation
+        });
+      });
 
-     // Hamburger menu click event listener
-     hamburger.addEventListener('click', () => {
-         overlay.classList.add('open'); // Add 'open' class to show overlay
-         links.forEach((link, index) => {
-             link.style.animationDelay = `${index * 0.2}s`; // Add animation delay for each link
-             link.classList.add('slide-up'); // Add 'slide-up' class for animation
-         });
-     });
-
-     // Close button click event listener
-     closebtn.addEventListener('click', () => {
-         overlay.classList.remove('open'); // Remove 'open' class to hide overlay
-         links.forEach(link => {
-             link.classList.remove('slide-up'); // Remove 'slide-up' class to reset animation
-         });
-     });
- });
-
-   </script>
-
+      // Close button click event listener
+      closebtn.addEventListener("click", () => {
+        overlay.classList.remove("open"); // Remove 'open' class to hide overlay
+        links.forEach((link) => {
+          link.classList.remove("slide-up"); // Remove 'slide-up' class to reset animation
+        });
+      });
+    });
+  </script>
 </html>
