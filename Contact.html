@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Annapurna Tiffins</title>
+    <title> Contact Us - Annapurna Tiffins</title>
     <meta name="description" content="Contact Annapurna Tiffins. Feel free to ask queries about your concerns.">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Annapurna Tiffins</title>
+
     <style>
       body {
         margin: 0;
@@ -575,7 +575,7 @@
       <div class="scrolled">
         <div class="navflexmobile">
           <div class="navlogo">
-            <img src="./images/annapurnalogo2.png" width="120px" />
+            <img src="./images/annapurnalogo2.png" width="120px" alt="annapurna-tiffins"/>
           </div>
 
           <div class="mobilecontainerdiv">
@@ -592,7 +592,7 @@
                   <li><a href="index.html">Home</a></li>
                   <li><a href="About.html">About</a></li>
                   <li><a href="Menu.html">Menu</a></li>
-                  <li><a href="Contactus.html">Contact</a></li>
+                  <li><a href="Contact.html">Contact</a></li>
                 </div>
               </div>
             </div>
@@ -605,7 +605,7 @@
       <nav class="navbar">
         <div class="navbarwidth">
           <div>
-            <img src="./images/annapurnalogo2.png" width="150px" />
+            <img src="./images/annapurnalogo2.png" width="150px" alt="annapurna-tiffins"/>
           </div>
 
           <div>
@@ -613,7 +613,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="About.html">About</a></li>
               <li><a href="Menu.html">Menu</a></li>
-              <li><a href="Contactus.html">Contact</a></li>
+              <li><a href="Contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -689,7 +689,7 @@
 
               <div class="icontext">
                 <h2>Address</h2>
-                <p> 4345A Calder Ave, Beaumont, TX 77706. Westbrook Shopping Center </p>
+                <p> 4345A Calder Ave, BeaumontTexas- 77706. Westbrook Shopping Center </p>
               </div>
             </div>
 
@@ -712,7 +712,7 @@
 
               <div class="icontext">
                 <h2>Email</h2>
-                <p>Address should be written here</p>
+                <p><a href="mailto:order@annapurna-tiffins.com">order@annapurna-tiffins.com</a></p>
               </div>
             </div>
           </div>
@@ -730,7 +730,6 @@
         const navbar = document.querySelector(".navflexmobile");
         const navbardesktop = document.querySelector(".navbar");
         const navbarwidth = document.querySelector(".navbarwidth");
-        const yearElement = document.getElementById("currentYear");
 
         // Scroll event listener
         window.addEventListener("scroll", function () {
@@ -781,14 +780,6 @@
           });
         }
 
-        if (yearElement) {
-          yearElement.textContent = getCurrentYear();
-        }
-
-        function getCurrentYear() {
-          const today = new Date();
-          return today.getFullYear();
-        }
       });
     </script>
   </body>
