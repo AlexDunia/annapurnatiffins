@@ -1395,6 +1395,14 @@
         });
       });
 
+      if (yearElement) {
+          yearElement.textContent = getCurrentYear();
+        }
+
+        function getCurrentYear() {
+          const today = new Date();
+          return today.getFullYear();
+        }
       // Close button click event listener
       closebtn.addEventListener("click", () => {
         overlay.classList.remove("open"); // Remove 'open' class to hide overlay
